@@ -53,7 +53,7 @@ Your `README` file and your source code files must contain your name and your te
 > **Note**: this section contains exactly the text on the Canvas assignment, reproduced here only for completeness of this document.
 > Since you made it here, you can safely ignore this section.
 
-1. Accept [this GitHub classroom assignment](TODO: Link TBD).
+1. Accept [this GitHub Classroom assignment](https://classroom.github.com/a/LiP3AUiU).
     * Select your team.
     * This step creates a GitHub repository for your team and links your team members' GitHub ids.
         * If you do not have a GitHub account, you are required to create one for this course
