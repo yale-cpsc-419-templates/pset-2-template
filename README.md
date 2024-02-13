@@ -1,10 +1,10 @@
 # Pset 2: Desktop GUI Application
 
-### Due Friday October 13 11:59 PM NHT (New Haven Time)
+### Due Friday February 23 11:59 PM NHT (New Haven Time)
 
 ## Table of Contents
 - [Pset 2: Desktop GUI Application](#pset-2-desktop-gui-application)
-    - [Due Friday October 13 11:59 PM NHT (New Haven Time)](#due-friday-october-13-1159-pm-nht-new-haven-time)
+    - [Due Friday February 23 11:59 PM NHT (New Haven Time)](#due-friday-february-23-1159-pm-nht-new-haven-time)
   - [Table of Contents](#table-of-contents)
   - [Purpose](#purpose)
   - [Rules](#rules)
@@ -118,14 +118,14 @@ The second must be the number of the port at which your `luxserver.py` is listen
 
 As noted previously, your `lux.py` must have a graphical user interface.
 Your graphical user interface must have these properties:
-* It must be built using the `PySide6` or `PyQt6` GUI framework.
-
+* It must be built using the `PyQt6` or `PySide6` GUI framework.
+  
   > **Note**: The `PyQt6` framework is only intermittently compatible with Apple Silicon CPUs (M1, M2).
   > Use `PySide6` if you have such a machine, just to be safe.
   > Fortunately, all relevant class, type, and function names are identical between the two packages.
-
-* When the application is launched, the main window should be no larger than one-fourth of the total screen area (*i.e.*, no wider than one-half of the screen's width and no taller than one-half of the screen's height).
-* Four `QLineEdit`s (text fields) labeled "Label", "Classifier", "Agent" and "Date" (in order) that allow the user to specify an object label, a classifier, an agent name, and a date.
+  
+* When the application is launched, the main window should be no larger than $\frac{1}{4}$ of the total screen area (*i.e.*, no wider than $\frac{1}{2}$ of the screen's width and no taller than $\frac{1}{2}$ of the screen's height).
+* Four `QLineEdit`s (text fields) labeled "Label", "Classifier", "Agent" and "Date" (in order) that allow the user to specify an object label, a classifier, an agent name, and a department.
 * A `QPushButton` (button) that commands your `lux.py` to communicate with your `luxserver.py`.
 Your `lux.py` must communicate with your `luxserver.py` to query the database each time the user clicks on the submit button or types the `Enter` key in any of the text fields.
 * A `QListWidget` (list box) whose entries are the results of the query.
@@ -138,7 +138,7 @@ Your `lux.py` must communicate with your `luxserver.py` to query the database ea
   * There must be no more than 1000 rows displayed in response to any query.
 
 > **Note**: To ensure the fields of your table are aligned, your list box ought to be displayed using a fixed-width font.
-> However, we did not and will not discuss Qt6 font or typeface specifications in class, so the provided `dialog.py` file provides an instantiated fixed-width `QFont` that you can use, named `FW_FONT`.
+> However, we did not and will not discuss `PyQt6` font or typeface specifications in class, so the provided `dialog.py` file provides an instantiated fixed-width `QFont` that you can use, named `FW_FONT`.
 > Examine [the Qt Framework Reference](https://doc.qt.io/qt-6/qtmodules.html) to determine where and how to use that font.
 
 Your `lux.py` must allow the user to select a particular list box entry.
@@ -148,10 +148,10 @@ If the user *double-clicks* on an entry, then your `lux.py` must select that ent
 If the user clicks or double-clicks in the list widget when it contains no entries (or in an unfilled part of the list widget), then your `lux.py` must do nothing.
 The detailed data in the dialog must contain the following pieces of information:
 * A section with header "Summary", containing a single-row table with the following column headers and content:
-    * "Accession No.", containing the accession number of the object
-    * "Date", containing the object's date
-    * "Place", containing the object's place
-    * "Department", containing the object's department
+  * "Accession No.", containing the accession number of the object
+  * "Date", containing the object's date
+  * "Place", containing the object's place
+  * "Department", containing the object's department
 * A section with header "Label" containing the object's label
 * A section with header "Produced By", containing a table with details of all agents that produced this object.
     The table must have the following column headers and content:
@@ -182,7 +182,7 @@ Your `lux.py` must be usable *without* a pointing device (mouse, touchpad, etc.)
 > According to the Mac user interface standards, Mac programs should be designed such that the user activates the selected list box entry by typing `Command-o`.
 > (Many popular Mac programs don't conform to that Mac standard.)
 >
-> Programs that use `PySide6` and `PyQt6` conform to the standards of each platform.
+> Programs that use `PyQt6` and `PySide6` conform to the standards of each platform.
 > That is, when running on Linux or Microsoft Windows, they require the user to type the `Enter` key; when running on Macs, they require the user to type `Command-o`.
 
 It is possible to design a better interface than the one just described.
@@ -426,22 +426,22 @@ Only once you have a reliable communication mechanism should you start the GUI s
 Rename this file `TEMPLATE_README.md` and replace it with a new `README.md` file.
 Your new `README` file must contain:
 
-* Your name and netid and your teammate's name and netid, at the beginning of the file
-* A paragraph describing your contribution, and another paragraph describing your teammate's contribution
-    * Please be thorough; we are looking for two substantial paragraphs, not a sentence or two
-* A description of whatever help (if any) you received from other people while doing the assignment
-* A description of the sources of information that you used while doing the assignment, that are not direct help from other people
-* An indication of how much time you spent doing the assignment, rounded to the nearest hour
-* Your assessment of the assignment:
-    * Did it help you to learn?
-    * What did it help you to learn?
-    * Do you have any suggestions for improvement? *Etc.*
-* (Optionally) Any information that will help us to grade your work in the most favorable light
-    * In particular, describe all known bugs and explain why any pylint style warnings you received are unavoidable or why you know better than pylint (a convincing argument may negate some pylint style penalties you accrue)
+ * Your name and netid and your teammate's name and netid, at the beginning of the file
+ * A paragraph describing your contribution, and another paragraph describing your teammate’s contribution.
+     * Please be thorough; we are looking for two substantial paragraphs, not a sentence or two.
+ * A description of whatever help (if any) you received from other people while doing the assignment.
+ * A description of the sources of information that you used while doing the assignment, that are not direct help from other people.
+ * An indication of how much time you spent doing the assignment, rounded to the nearest hour.
+ * Your assessment of the assignment:
+     * Did it help you to learn?
+     * What did it help you to learn?
+     * Do you have any suggestions for improvement? *Etc.*
+ * (Optionally) Any information that will help us to grade your work in the most favorable light.
+     * In particular, describe all known bugs and explain why any `pylint` style warnings you received are unavoidable or why you know better than `pylint` (a convincing argument might negate some `pylint` style penalties you may accrue).
 
 Your README file must be a plain text file: don't create it using Microsoft Word or any other word processor, although you are encouraged to format it using [markdown](https://www.markdownguide.org/) tags.
 
-Package your assignment files by [creating a release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository#creating-a-release) on GitHub in your assignment repository.
+Package your assignment files by [creating a release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository#creating-a-release) on GitHub in your assignment repository. 
 There must be at least the following files with the following (exact) names in that repository when you submit it:
 
 * `README.md`
@@ -458,7 +458,6 @@ Ensure that any additional files needed by your program (such as other Python mo
 > 
 > Failure to include a `requirements.txt` file if you use third-party packages will result in an automatic 5% penalty and a request that you submit an appropriate `requirements.txt` file to the graders.
 
-
 Submit your solution to Canvas (in the assignment named "Pset 2: Desktop GUI Application") as [a link to that release](https://docs.github.com/en/repositories/releasing-projects-on-github/linking-to-releases).
 
 As noted above in the [Rules](#rules) section, it must be the case that either you submit all of your team’s files or your teammate submits all of your team’s files.
@@ -471,7 +470,7 @@ Thanks.
 
 ### Late Submissions
 
-The deadline for this assignment is **11:59 PM NHT (New Haven Time) on Friday October 13, 2022**.
+The deadline for this assignment is **11:59 PM NHT (New Haven Time) on Friday February 23, 2024**.
 There is a strict 15 minute grace period beyond the deadline, to be used in case of technical or administrative difficulties, and not for putting final touches on your solution.
 (If you can do it in as little as 15 minutes, it probably is insignificant enough not to change your grade.)
 
@@ -497,4 +496,4 @@ Partial credit will be given only if there is an *obvious* "quick fix" (*e.g.*, 
 
 Adapted from Assignment 2 for COS 333 &copy;2021 by Robert M. Dondero, Jr., Princeton university
 
-Modified &copy;2023 by Alan Weide, Yale University
+Modified &copy;2024 by Alan Weide, Yale University

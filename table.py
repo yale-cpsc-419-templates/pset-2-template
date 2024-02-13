@@ -191,7 +191,7 @@ class Table:
             formatted_columns.append(value)
 
         # Square off and transpose formatted_columns so each line has one value from each column
-        row = [self._col_sep.join(f"{v:<{w}}"
+        row = [self._col_sep.join(f"{v:<{max(w, 0)}}"
                                   for (v, w) in zip(line, self.column_widths))
                for line in itertools.zip_longest(*formatted_columns, fillvalue="")]
 
@@ -286,7 +286,7 @@ class Table:
                 case FormatSpec.PREFORMATTED:
                     return width >= nominal_width
                 case FormatSpec.TRUNCATED:
-                    return width >= max(len(header), len(self._dots + 3))
+                    return width >= max(len(header), len(self._dots) + 3)
 
             # This code should never be reached; here only to make pylint happy
             assert False
