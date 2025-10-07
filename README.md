@@ -125,7 +125,7 @@ Your graphical user interface must have these properties:
   > Fortunately, all relevant class, type, and function names are identical between the two packages.
   
 * When the application is launched, the main window should be no larger than $\frac{1}{4}$ of the total screen area (*i.e.*, no wider than $\frac{1}{2}$ of the screen's width and no taller than $\frac{1}{2}$ of the screen's height).
-* Four `QLineEdit`s (text fields) labeled "Label", "Classifier", "Agent" and "Date" (in order) that allow the user to specify an object label, a classifier, an agent name, and a department.
+* Four `QLineEdit`s (text fields) labeled "Label", "Classifier", "Agent" and "Date" (in order) that allow the user to specify an object label, a classifier, an agent name, and a date.
 * A `QPushButton` (button) that commands your `lux.py` to communicate with your `luxserver.py`.
 Your `lux.py` must communicate with your `luxserver.py` to query the database each time the user clicks on the submit button or types the `Enter` key in any of the text fields.
 * A `QListWidget` (list box) whose entries are the results of the query.
