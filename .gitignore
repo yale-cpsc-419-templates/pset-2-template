@@ -1,5 +1,5 @@
-# Database files (potentially too large for GitHub)
-*.sqlite
+# reg.sqlite is small enough to keep in the repository.
+lux.sqlite
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
